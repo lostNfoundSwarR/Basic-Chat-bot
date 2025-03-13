@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+     font-family: "Poppins", sans-serif;
+     color: #fff;
+}
+
+body {
+     padding: 0;
+     margin: 0;
+     background-color: rgb(23, 24, 24);
+}
+
+.container {
+     display: flex;
+     flex-direction: column;
+     gap: 20px;
+     align-items: center;     
+}
+
+.title {
+     font-size: 2.3rem;
+}
+
+.main-container {
+     background-color: #322c2c;
+     padding: 40px 20px 40px;
+     border-radius: 10px;
+     max-width: 400px;
+     min-width: calc(100% - 75vh)
+}
+
+.msg-container {
+     height: 450px;
+     display: flex;
+     flex-direction: column;
+     padding: 10px 30px;
+     border-bottom: 2px solid #ffffff69;
+     overflow-y: auto;
+}
+
+.msg {
+     font-size: 1.25rem;
+     word-spacing: 2.5px;
+}
+
+.msg span {
+     font-weight: 500;
+}
+
+.outgoing-msg {
+     align-self: flex-end;
+     background-color: #553d3d;
+     padding: 20px;
+     border-radius: 50px 50px 0 50px;
+     word-break: break-all;
+     max-width: 250px;
+}
+
+.incoming-msg {
+     background-color: #4a4152;
+     padding: 20px;
+     border-radius: 50px 50px 50px 0;
+     word-break: break-all;
+     max-width: 350px;
+}
+
+.input-container {
+     display: flex;
+     gap: 10px;
+     margin-top: 10px;
+}
+
+#prompt-input {
+     width: 500px;
+     font-size: 1.3rem;
+     padding: 10px;
+     border-radius: 10px;
+     font-weight: 500;
+     background-color: #553d3d;
+     outline: none;
+}
+
+.submit-btn {
+     width: 50px;
+     height: 50px;
+     align-self: center;
+     border-radius: 50px;
+     background-color: #322c2c;
+     outline: none;
+}
+
+.submit-btn i {
+     font-size: 50px;
+     cursor: pointer;
+     transition: all 0.5s;
+}
+
+.submit-btn i:hover {
+     color: #7a5e5e;
+}
