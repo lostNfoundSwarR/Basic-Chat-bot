@@ -2,16 +2,15 @@ const promptInput = document.querySelector("#prompt-input");
 const subBtn = document.querySelector(".submit-btn i");
 const msgContainer = document.querySelector(".msg-container");
 
-const apiKey = "AIzaSyASRjT5dEdKKt2XFRjbR4dJVPKelOyAoIw";
+// Enter your Gemini API key
+const apiKey = "";
 const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`;
 
+// Message types
 const c1 = "outgoing-msg"; 
 const c2 = "incoming-msg";
 
-const chatHistory = [];
-
-console.log(c2);
-
+//Creates a message element
 function createMsg(type, text) {
     let msgEle = document.createElement("div");
     let msgTxt = document.createElement("span");
@@ -29,6 +28,7 @@ function createMsg(type, text) {
     return msgEle;
 }
 
+// Sends the request to the server (API)
 async function sendReq() {
     let prompt = promptInput.value.trim();
     promptInput.value = "";
@@ -58,6 +58,7 @@ async function sendReq() {
 
         console.log(data);
 
+        // Filters unecessary characters
         const responseTxt = data.candidates[0].content.parts[0].text.replace(/\*\*([^*]+)\*\*/g, "\n");
         console.log(responseTxt)
 
@@ -68,6 +69,7 @@ async function sendReq() {
         console.error(error);
     }
 
+    // Scrolls to the latest message
     msgContainer.scrollTop = msgContainer.scrollHeight;
 }
 
